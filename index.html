@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Azahara Lucas Garrón</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: hidden;
+            box-sizing: border-box;
+        }
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: whitesmoke;
+            z-index: 9999;
+        }
+        #main-content {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+                document.body.style.overflowY = 'auto';
+            }, 2000);
+        };
+    </script>
+</head>
+<body>
+    <div id="loading">
+        <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla de Carga</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .cubo {
+            position: relative;
+            width: 4em;
+            height: 4em;
+            transform-style: preserve-3d;
+            animation: rotar 4s linear infinite;
+        }
+        .cubo > span {
+            position: absolute;
+            width: 4em;
+            height: 4em;
+            border: 2px solid #9b59b6;
+            box-shadow: inset 0 0 15px 5px rgba(155, 89, 182, 0.2),
+                        0 0 1px rgba(155, 89, 182, 0.15);
+            border-radius: 4px;
+        }
+        .cubo > span:nth-child(1) { transform: rotateY(0deg) translateZ(2em); }
+        .cubo > span:nth-child(2) { transform: rotateY(90deg) translateZ(2em); }
+        .cubo > span:nth-child(3) { transform: rotateY(180deg) translateZ(2em); }
+        .cubo > span:nth-child(4) { transform: rotateY(-90deg) translateZ(2em); }
+        .cubo > span:nth-child(5) { transform: rotateX(90deg) translateZ(2em); }
+        .cubo > span:nth-child(6) { transform: rotateX(-90deg) translateZ(2em); }
+
+        @keyframes rotar {
+            0% { transform: rotateY(0deg) rotateX(0deg); }
+            50% { transform: rotateY(180deg) rotateX(180deg); }
+            100% { transform: rotateY(360deg) rotateX(360deg); }
+        }
+        .loading h1, .loading p {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-weight: 100;
+            letter-spacing: 2px;
+            font-size: 18px;
+            margin: 5px 0;
+            margin-top: 20p;
+        }
+    </style>
+<body>
+    <div class="container">
+        <div class="cubo">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="loading m-3">
+            <h1>Loading</h1>
+            <p>...</p>
+        </div>
+    </div>
+</body>
+    </div>
+	 <div id="main-content">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Portfolio</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script type="text/javascript" src="jR3DCarousel-master/dist/jR3DCarousel.min.js"></script>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100%;
+			background: #000115;
+     	 	overflow-x: hidden;
+		}
+		.bg-negro{
+			background-color: #000115;
+		}
+		.navbar-brand img{
+			width: 70px;
+		}
+		@font-face {
+  		font-family:The_Future;
+  		src: url(fuentes/The_Future/TheFuture-Regular.otf);
+		}
+	    .star {
+	      position: absolute;
+	      background-color: white;
+	      border-radius: 50%;
+	      opacity: 0.7;
+	      animation: twinkle 3s infinite ease-in-out;
+	    }
+	    @keyframes twinkle {
+	      0%, 100% { opacity: 0.3; }
+	      50% { opacity: 1; }
+	    }
+	    @keyframes moveStar {
+	      0% { transform: translate(0, 0); }
+	      100% { transform: translate(var(--move-x), var(--move-y)); }
+	    }
+		.cursor{
+			z-index:9999;
+			position: fixed;
+			background: #2696e8;
+			width: 20px	;
+			height: 20px;
+			border-radius: 50%;
+			pointer-events: none;
+			box-shadow:0 0 20px #2696e8,
+			           0 0 60px #2696e8,
+			           0 0 100px #2696e8;
+			animation:colors 5s infinite; 
+			transform: translate(-50%,-50%);
+		}
+		@keyframes colors {
+			0%{
+			    filter: hue-rotate(0deg);	
+			}
+			100%{
+			    filter: hue-rotate(360deg);	
+			}
+		}
+		.cursor:before{
+			content: ``;
+			position: absolute;
+			background: #2696e8;
+			width: 50px;
+			height: 50px;
+			opacity: 0.2;
+		}
+		.tresD{
+			height: 40vh;
+			width: 100%;
+		}
+		.sketchfab-embed-wrapper,
+		.video-container {
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  margin: 10px auto;
+		}
+		iframe.ejemplos {
+		  width: 100%;
+		  height: 400px; 
+		  max-width: 600px; 
+		  border: none;
+		}
+		img.titulo1, img.logo2{
+			width: 60px;
+		}
+		header{
+			height: auto;
+			position:relative;
+		}
+		button.navbar-toggler{
+			border: none;
+		}
+        h2.tituloprincipal{
+	        font-family:The_Future;
+	        font-size: 25px;
+	       	margin-bottom: 20px;
+	       	color:#CD8175;
+	       	text-shadow: 0px 5px #836DB2;
+      		-webkit-text-fill-color:#CD8175;
+	    }
+		span.desplegable{
+			color: #CD8175;
+			font-size: 30px;		
+		}
+		span.desplegable:hover{
+			color: #836DB2;
+		}
+		#menudesplegable{
+			font-size: 13px;
+			font-family:The_Future;
+			color: #CD8175;
+		}
+		#menudesplegable:hover{
+			color: #836DB2;
+			background-color: #CD8175;
+			transition: background-color 0.3s ease;
+			border-radius: 40px;
+		}
+		.fondosection{
+			height: auto;
+			background-image:url(proyectos/imagenes/fondo1.png);
+			background-size: cover;
+    		background-position: center;
+    		background-attachment: fixed;
+    		background-filter: grayscale(30%);
+    		background-filter: blur(20px);
+		}
+		.jR3DCarouselGalleryCustomeTemplate {
+	      margin: 0 auto; 
+	    }
+
+	    .jR3DCarouselGalleryCustomeTemplate .captions{
+	      position: relative;
+	      padding: 4px 0;
+	      bottom: 27px;
+	      background: #ec1c8e;
+	      display:block     
+	    }
+	    .jR3DCarouselGalleryCustomeTemplate a{
+	      text-decoration: none;      
+	    }
+		.fondofooterfinal{
+			height: auto;
+			background-image: url(proyectos/imagenes/Fondo2.png);
+			background-size: cover;
+    		background-position: center;
+    		background-attachment: fixed;
+    		filter: grayscale(10%);
+		}
+		.fondofooter{
+			height: auto;
+		}
+		.fotoperfil{
+			width: 30%;
+			height: auto;
+			align-items: center;
+	        justify-content: center;
+	        display: flex;
+	        border-radius: 30px;
+
+		}
+		i.vimeo, i.linkedin, i.email{
+			color: #CD8175;
+			font-size: 20px;
+		}
+		i.vimeo:hover, i.linkedin:hover, i.email:hover{
+			color: #836DB2;
+		}
+		h4.tituloprincipal2{
+			font-family:The_Future;
+      		font-size: 22px;
+      		margin-bottom: 20px;
+      		color:#836DB2;
+
+		}
+	    .iconosaplicaciones{
+	      background-color: #aaa3d1;
+	      color: black;
+	      border-radius: 10px;
+	      padding: 15px;
+	      display: flex;
+	      flex-direction: column;
+	      align-items: center;
+	      justify-content: center;
+	      margin-bottom: 15px;
+	      font-family:The_Future;
+	    }
+	    .estudiante{
+	      color:#836DB2 ;
+	    }
+	    .iconosaplicaciones img {
+	      max-width: 50px;
+	      margin-bottom: 10px;
+	    }
+	    .sobre-mi {
+	      height: 100%;
+	      display: flex;
+	      align-items: center;
+	      justify-content: center;
+	      flex-direction: column;
+	    }
+	    .parrafosobremi{
+	      color: white;
+	      font-family:The_Future;
+	      font-size: 13px;
+	    }
+	    #contacto {
+	      color: #CD8175;
+	      border-radius: 10px;
+	      font-family:The_Future;    
+	    }
+	    .form-control {
+	        border-radius: 8px;
+	        border: 1px solid #ccc;
+	    }
+	    button.botonenviar {
+	        background-color:#a95e52 ;
+	        border: none;
+	        padding: 10px 20px;
+	        font-size: 16px;
+	        border-radius: 5px;
+	        transition: background-color 0.3s ease;
+	    }
+	    button.botonenviar:hover {
+	        	background-color: #836DB2;
+	    }
+	    .copy{
+	    	font-size: 12px;
+	    	background-color: #00010c;
+	    	width: 100%;
+	    }
+		@media screen and (min-width:576px){
+			img.titulo1, img.logo2{
+				width: 70px;
+		    }
+		    i.desplegable{
+		    	font-size: 40px;
+		    }
+		#menudesplegable{
+				font-size: 13px;
+			}
+			.tresD{
+				height: 50vh;
+				width: 100%;
+			}
+			h2.tituloprincipal{
+				font-size: 26px;
+			}
+			h4.tituloprincipal2{
+				font-size: 24px;
+			}
+      		.parrafosobremi{
+        		font-size: 15px;
+      		}
+			i.vimeo, i.linkedin, i.email{
+				font-size: 25px;
+			}
+			.copy{
+    			font-size: 14px;
+    		}
+		}
+		@media screen and (min-width:768px){
+			img.titulo1, img.logo2{
+				width: 80px;
+			}
+			#menudesplegable{
+				font-size: 18px;
+			}
+			.tresD{
+				height: 70vh;
+				width: 100%;
+			}
+			h2.tituloprincipal{
+				font-size: 30px;
+			}
+			h4.tituloprincipal2{
+				font-size: 28px;
+			}
+      		.parrafosobremi{
+        		font-size: 17px;
+      		}
+			i.vimeo, i.linkedin, i.email{
+				font-size: 30px;
+			}
+			.copy{
+    			font-size: 16px;
+    		}
+		}
+		@media screen and (min-width:960px){
+			img.titulo1, img.logo2{
+				width: 100px;	
+			}
+			#menudesplegable{
+				font-size: 24px;
+			}
+			.tresD{
+				height: 90vh;
+				width: 100%;
+			}
+			h2.tituloprincipal{
+				font-size: 35px;
+			}
+			h4.tituloprincipal2{
+				font-size: 30px;
+			}
+      		.parrafosobremi{
+        		font-size: 19px;
+      		}
+			i.vimeo, i.linkedin, i.email{
+				font-size: 35px;
+			}
+			.copy{
+    			font-size: 18px;
+    		}
+		}
+
+		.centrado{
+			justify-content: space-between;
+		}
+	</style>
+</head>
+<body>
+<div class="cursor"></div>
+<div class="gridContainer clearfix">
+	<header>
+		<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-negro">
+  			<a class="navbar-brand" href="#"><img src="proyectos/imagenes/Logo Azahara.png" class="titulo1 float-left "></a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  			</button>
+  			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+    			<ul class="navbar-nav ml-auto align-items-center">
+      				<li class="nav-item active">
+        				<a class="nav-link text-center font-weight-bold" id="menudesplegable" href="#" onclick="setActive(this)">HOME <span class="sr-only">(current)</span></a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link text-center font-weight-bold" id="menudesplegable" href="#proyectos" onclick="setActive(this)">PROYECTOS</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link text-center font-weight-bold" id="menudesplegable" href="#habilidadessobremi" onclick="setActive(this)">HABILIDADES</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link text-center font-weight-bold" id="menudesplegable" href="#contacto" onclick="setActive(this)">CONTACTO</a>
+      				</li>
+    			</ul>
+  			</div>
+		</nav>
+			<div class="sketchfab-embed-wrapper col-12 p-0">
+				<iframe class="tresD" title="Logo Azahara" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f1dee0aa5bf343298a20b696d56ca12c/embed?autospin=1&autostart=1&preload=1&transparent=1"> 
+				</iframe> 
+			</div>
+	</header>
+	<section>
+	  <div class="container-fluid">
+	    <div class="row">
+	      <div class="col-12 fondosection">
+	        <h2 id="proyectos" class="tituloprincipal font-weight-bold text-center mt-5">PROYECTOS PRINCIPALES</h2>
+	        <div class="container mt-5">
+	          <div class="row">
+	            <!-- Objetos 3D -->
+	            <h4 class="col-12 tituloprincipal2 text-center mt-5">OBJETOS 3D</h4>
+	            
+	            <!-- Primer objeto 3D -->
+	            <div class="sketchfab-embed-wrapper col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="piano" frameborder="0" allowfullscreen src="https://sketchfab.com/models/5f56933700d94c53835ede496b813f82/embed?autostart=1&transparent=1"></iframe>
+	            </div>
+	            <!-- Segundo objeto 3D -->
+	            <div class="sketchfab-embed-wrapper col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="astronauta" frameborder="0" allowfullscreen src="https://sketchfab.com/models/13a3b9fccaa248e1891761448b33ce24/embed?autospin=1&autostart=1&preload=1&transparent=1"></iframe>
+	            </div>
+	            <!-- Tercer objeto 3D -->
+	            <div class="sketchfab-embed-wrapper col-lg-4 col-md-6 col-12"> 
+	            	<iframe class="ejemplos" title="Dobby" frameborder="0" allowfullscreen src="https://sketchfab.com/models/98069991ffae440c9fa6f28ee222d7cc/embed?autospin=1&autostart=1&transparent=1"> </iframe>
+	            </div>
+	            <!-- Edición de fotos -->
+	            <h4 class="col-12 tituloprincipal2 text-center mt-5">EDICIÓN DE IMAGENES</h4>
+			      <div class="jR3DCarouselGalleryCustomeTemplate">
+                <div class="jR3DCarouselCustomSlide">
+                  <img src="proyectos/imagenes/coche 1.png" />
+                </div>
+                <div class="jR3DCarouselCustomSlide">
+                  <img src="proyectos/imagenes/coche 2.jpg" />
+                </div>
+                <div class="jR3DCarouselCustomSlide">
+                  <img src="proyectos/imagenes/coche 3.jpg" />
+                </div>
+                <div class="jR3DCarouselCustomSlide">
+                  <img src="proyectos/imagenes/moto 1.jpg" />
+                </div>
+                <div class="jR3DCarouselCustomSlide">
+                  <img src="proyectos/imagenes/moto 2.jpg" />
+                </div>
+              </div>
+	            <!-- Proyectos 3D -->
+	            <h4 class="col-12 tituloprincipal2 text-center mt-5">PROYECTOS 3D</h4>
+	            <!-- Proyecto 3D 1 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="vimeo-player" src="https://player.vimeo.com/video/1032319745?h=62d1bef86f" frameborder="0" allowfullscreen></iframe>
+	            </div>
+	            <!-- Proyecto 3D 2 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="vimeo-player" src="https://player.vimeo.com/video/1032320437?h=28d4cd9630" frameborder="0" allowfullscreen></iframe>
+	            </div>
+	            <!-- Proyecto 3D 3 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="vimeo-player" src="https://player.vimeo.com/video/1033580673?h=cb29ae67d9" frameborder="0" allowfullscreen></iframe>
+	            </div>
+	            <!-- Proyecto 3D 4 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="vimeo-player" src="https://player.vimeo.com/video/1032319772?h=f72d53a634" frameborder="0" allowfullscreen></iframe>
+	            </div>
+
+	            <!-- Montaje -->
+	            <h4 class="col-12 tituloprincipal2 text-center mt-5">MONTAJE</h4>
+	            <!-- Montaje 1 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="vimeo-player" src="https://player.vimeo.com/video/1032319979?h=4e8d1ab42f" frameborder="0" allowfullscreen></iframe>
+	            </div>
+	            <!-- Montaje 2 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="vimeo-player" src="https://player.vimeo.com/video/1032320030?h=c1abec1634" frameborder="0" allowfullscreen></iframe>
+	            </div>
+	            <!-- Montaje 3 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="vimeo-player" src="https://player.vimeo.com/video/1034914516?h=b614b56a5c" frameborder="0" allowfullscreen></iframe>
+	            </div>
+	            <!-- Montaje 4 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="vimeo-player" src="https://player.vimeo.com/video/1034914346?h=e62c179279" frameborder="0" allowfullscreen></iframe>
+	            </div>
+	            <!-- Montaje 5 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" title="vimeo-player" src="https://player.vimeo.com/video/1036994051" frameborder="0" allowfullscreen></iframe>
+	            </div>
+	            <h4 class="col-12 tituloprincipal2 text-center mt-5">VIDEOJUEGOS</h4>
+	            <!-- vIDEOJUEGO 1 -->
+	            <div class="col-12">
+	              
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+	<main>
+    <div class="container">
+      <h2 id="habilidadessobremi" class="tituloprincipal font-weight-bold text-center mt-5">HABILIDADES</h2>
+	    <div class="row">
+	      <div class="col-12 col-md-6">
+	        <div class="row">
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/PHOTOSHOP.png" alt="Photoshop">
+	              <span>PHOTOSHOP</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/AFTER EFFECTS.png" alt="After effects">
+	              <span>AFTER EFFECTS</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/DREAMWEAVER.png" alt="Dreamweaver">
+	              <span>DREAMWEAVER</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/PREMIERE.png" alt="CSS3">
+	              <span>PREMIERE PRO</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/AUDITION.png" alt="Audition">
+	              <span>AUDITION</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/XD.png" alt="XD">
+	              <span>XD</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/JAVA SCRIPT.png" alt="JavaScript">
+	              <span>JAVASCRIPT</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/CSS.png" alt="Dreamweaver">
+	              <span>CSS</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/HTML5.png" alt="After Effects">
+	              <span>HTML5</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/BOOTSTRAP.png" alt="bootstrap">
+	              <span>BOOTSTRAP</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/BLENDER.png" alt="HTML5">
+	              <span>BLENDER</span>
+	            </div>
+	          </div>
+	          <div class="col-6 col-lg-4">
+	            <div class="iconosaplicaciones">
+	              <img src="proyectos/imagenes/aplicaciones/UNITY.png" alt="Unity">
+	              <span>UNITY</span>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-12 col-md-6">
+	        <div class="sobre-mi">
+	          <h4 class="tituloprincipal2">SOBRE MÍ</h4>
+	          <img class="fotoperfil" src="proyectos/imagenes/foto azahara.png" alt="fotoperfil">
+	          <p class="parrafosobremi">
+	            ¡Hola! Soy Azahara, <span class="estudiante"> estudiante de animación 3D</span>. 
+	          </p>
+	          <p class="parrafosobremi">
+	            Me considero una persona responsable, amable, simpática, entusiasta y comprometida con mi trabajo.
+	          </p>
+	          <p class="parrafosobremi">
+	            Cuando no estoy diseñando mis proyectos quizás puedas encontrarme disfrutando de historias en cualquier formato (pelis,
+	            series, cómics, libros, videojuegos...).
+	          </p>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</main>
+	<footer>
+		<div class="container-fluid">
+			<div class="row fondofooterfinal">
+				<div id="contacto" class="col-12 container mt-5 mb-5 fondofooter">
+					<h2 class="tituloprincipal font-weight-bold text-center mt-5 mb-4">CONTÁCTAME</h2>
+					<form class="col-6" action="https://formspree.io/f/mgverydj" method="POST">
+						<div class="form-group">
+							<label for="nombre">Nombre:</label>
+							<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Correo Electrónico:</label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Tu correo" required>
+						</div>
+						<div class="form-group">
+							<label for="mensaje">Mensaje:</label>
+							<textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+						</div>
+						<button type="submit" class="btn botonenviar btn-block">Enviar</button>
+					</form>
+				</div>
+				<div class="col-12">
+					<div class="row d-flex justify-content-center align-items-center m-1 mb-5">
+						<a href="https://vimeo.com/azaharaga">
+              				<i class="bi bi-vimeo vimeo m-2"></i>
+            			</a>
+						<a href="mailto:alucgar105@g.educaand.es">
+							<i class="bi bi-envelope-heart-fill email m-2"></i>
+						</a>
+						<a href="https://linkedin.com/in/azahara-lucas-garron-75b69433a">
+							<i class="bi bi-linkedin linkedin m-2"></i></a>
+					</div>
+					<div class="col-12 d-flex justify-content-center align-items-center mt-5 mb-5">
+						<a href="https://skfb.ly/pstpq">
+							<img src="proyectos/imagenes/Logo Azahara.png" class="logo2">
+						</a>
+					</div>
+				</div>
+				<div class="col-12 container copy text-center py-4">
+					<p>&copy; 2024 - Azahara Lucas Garrón - Mi Portfolio</p>
+				</div>
+			</div>
+		</footer>
+</div>
+	<script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar .nav-link');
+
+        // Detect active section on scroll
+        window.addEventListener('scroll', () => {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 50) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            // Update active link
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Ensure active link on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentHash = location.hash || '#home';
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentHash) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+       <script type="text/javascript">
+			const cursor = document.querySelector(".cursor");
+			let timeout;
+
+			
+			document.addEventListener("mousemove", (e) => {
+				clearTimeout(timeout);
+				const x = e.clientX; 
+				const y = e.clientY; 
+
+				cursor.style.transform = `translate(${x}px, ${y}px)`;
+				cursor.style.display = "block";
+
+				timeout = setTimeout(() => {
+					cursor.style.display = "none";
+				}, 1000);
+			});
+
+		
+			document.addEventListener("mouseout", (e) => {
+				if (!e.relatedTarget || e.relatedTarget.nodeName === "HTML") {
+					cursor.style.display = "none";
+				}
+			});
+
+			const iframe = document.querySelector("iframe");
+			if (iframe) {
+				iframe.addEventListener("mouseenter", () => {
+					cursor.style.display = "none";
+				});
+				iframe.addEventListener("mouseleave", () => {
+					cursor.style.display = "block";
+				});
+			}
+
+		</script>
+    <script>
+    function createStars() {
+      const numberOfStars = 100;
+      const starContainer = document.getElementsByTagName("header")[0];
+
+      for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+
+
+        const size = Math.random() * 3 + 1 + 'px';
+        star.style.width = size;
+        star.style.height = size;
+
+        const xPos = Math.random() * window.innerWidth + 'px';
+        const yPos = Math.random() * window.innerHeight + 'px';
+        star.style.left = xPos;
+        star.style.top = yPos;
+
+        const moveX = (Math.random() * 200 - 100) + 'px';
+        const moveY = (Math.random() * 200 - 100) + 'px';
+        star.style.setProperty('--move-x', moveX);
+        star.style.setProperty('--move-y', moveY);
+
+        star.style.animation =`moveStar ${Math.random() * 10 + 5}s infinite ease-in-out, twinkle 3s infinite ease-in-out`;
+
+        starContainer.appendChild(star);
+      }
+    }
+    function regenerateStars() {
+      document.querySelectorAll('.star').forEach(star => star.remove());
+      createStars();
+    }
+    createStars();
+    window.addEventListener('resize', regenerateStars);
+  </script>
+ <script type="text/javascript">
+	$(document).ready(function(){
+	  var slideImages = [ {src: '../jRCarousel/images/01.jpg'},
+	                    {src: '../jRCarousel/images/02.jpg'},
+	                    {src: '../jRCarousel/images/03.jpg'},
+	                    {src: '../jRCarousel/images/04.jpg'},
+	                    {src: '../jRCarousel/images/05.jpg'} ]
+	  
+	  
+	  
+	  var carouselCustomeTemplateProps =  {
+	        width: 440,         /* largest allowed width */
+	        height: 520,        /* largest allowed height */
+	        slideLayout : 'fill',     /* "contain" (fit according to aspect ratio), "fill" (stretches object to fill) and "cover" (overflows box but maintains ratio) */
+	        animation: 'slide3D',   /* slide | scroll | fade | zoomInSlide | zoomInScroll */
+	        animationCurve: 'ease',
+	        animationDuration: 1900,
+	        animationInterval: 2000,
+	        slideClass: 'jR3DCarouselCustomSlide',
+	        autoplay: false,
+	        controls: true,     /* control buttons */
+	        navigation: ''      /* circles | squares | '' */,
+	        perspective: 2200,
+	        rotationDirection: 'ltr',
+	        onSlideShow: slideShownCallback
+	          
+	    }
+	  function slideShownCallback($slide){
+	    console.log("Slide shown: ", $slide.find('img').attr('src'))
+	  }
+
+	  jR3DCarouselCustomeTemplate = $('.jR3DCarouselGalleryCustomeTemplate').jR3DCarousel(carouselCustomeTemplateProps);
+
+	  })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
