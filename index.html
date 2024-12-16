@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Portfolio Azahara Lucas Garrón</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link rel="stylesheet" href="LC-Lightbox-LITE-master/css/lc_lightbox.css" />
+	<link rel="stylesheet" href="LC-Lightbox-LITE-master/skins/minimal.css" />
+	
+  	
+	<style>
+	body {
+    	margin: 0;
+    	padding: 0;
+    	overflow-y: hidden;
+    	box-sizing: border-box;
+	}
+	#loading {
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    background-color: black;
+	    color: whitesmoke;
+	    z-index: 9999;
+	}
+	#main-content {
+	    display: none;
+	    width: 100%;
+	    height: 100%;
+	}
+
+	/*pantalla de carga*/
+	 body {
+	    margin: 0;
+	    padding: 0;
+	    background-color: black;
+	    color: whitesmoke;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	    min-height: 100vh;
+	    overflow: hidden;
+	}
+	.container {
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	}
+	.cubo {
+	    position: relative;
+	    width: 4em;
+	    height: 4em;
+	    transform-style: preserve-3d;
+	    animation: rotar 4s linear infinite;
+	}
+	.cubo > span {
+	    position: absolute;
+	    width: 4em;
+	    height: 4em;
+	    border: 2px solid #9b59b6;
+	    box-shadow: inset 0 0 15px 5px rgba(155, 89, 182, 0.2),
+	                0 0 1px rgba(155, 89, 182, 0.15);
+	    border-radius: 4px;
+	}
+	.cubo > span:nth-child(1) { transform: rotateY(0deg) translateZ(2em); }
+	.cubo > span:nth-child(2) { transform: rotateY(90deg) translateZ(2em); }
+	.cubo > span:nth-child(3) { transform: rotateY(180deg) translateZ(2em); }
+	.cubo > span:nth-child(4) { transform: rotateY(-90deg) translateZ(2em); }
+	.cubo > span:nth-child(5) { transform: rotateX(90deg) translateZ(2em); }
+	.cubo > span:nth-child(6) { transform: rotateX(-90deg) translateZ(2em); }
+
+	@keyframes rotar {
+	    0% { transform: rotateY(0deg) rotateX(0deg); }
+	    50% { transform: rotateY(180deg) rotateX(180deg); }
+	    100% { transform: rotateY(360deg) rotateX(360deg); }
+	}
+	.loading h1, .loading p {
+	    text-align: center;
+	    font-family:The_Future;
+	    font-weight: 100;
+	    letter-spacing: 2px;
+	    font-size: 18px;
+	    margin: 5px 0;
+	    margin-top: 20p;
+	}
+
+	/*fin css pantalla de carga*/
+	/*css portfolio*/
+
+	*{
+	    margin: 0;
+	    padding: 0;
+	    box-sizing: border-box;
+	}
+	body{
+	    height: 100%;
+	    background: #000115;
+	      overflow-x: hidden;
+	}
+	.bg-negro{
+	    background-color: #000115;
+	}
+	.navbar-brand img{
+	    width: 70px;
+	}
+	@font-face {
+	  font-family:The_Future;
+	  src: url(fuentes/The_Future/TheFuture-Regular.otf);
+	}
+	.star {
+	  position: absolute;
+	  background-color: white;
+	  border-radius: 50%;
+	  opacity: 0.7;
+	  animation: twinkle 3s infinite ease-in-out;
+	}
+	@keyframes twinkle {
+	  0%, 100% { opacity: 0.3; }
+	  50% { opacity: 1; }
+	}
+	@keyframes moveStar {
+	  0% { transform: translate(0, 0); }
+	  100% { transform: translate(var(--move-x), var(--move-y)); }
+	}
+	.cursor{
+	    z-index:9999;
+	    position: fixed;
+	    background: #2696e8;
+	    width: 20px	;
+	    height: 20px;
+	    border-radius: 50%;
+	    pointer-events: none;
+	    box-shadow:0 0 20px #2696e8,
+	               0 0 60px #2696e8,
+	               0 0 100px #2696e8;
+	    animation:colors 5s infinite; 
+	    transform: translate(-50%,-50%);
+	}
+	@keyframes colors {
+	    0%{
+	        filter: hue-rotate(0deg);	
+	    }
+	    100%{
+	        filter: hue-rotate(360deg);	
+	    }
+	}
+	.cursor:before{
+	    position: absolute;
+	    background: #2696e8;
+	    width: 50px;
+	    height: 50px;
+	    opacity: 0.2;
+	}
+	.tresD{
+	    height: 40vh;
+	    width: 100%;
+	}
+	.sketchfab-embed-wrapper{
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  margin: 10px auto;
+	}
+
+	.video-container {
+	    width: 100%;
+	    aspect-ratio: 16 / 9;
+	    background-color: rgba(255, 192, 203, 0);
+	}
+
+	.video-container iframe {
+	    width: 100%;
+	    height: 100%;
+	}
+
+	.ejemplostresd{
+	    width: 100%;
+	      height: 40vh; 
+	      border: none;	
+	}
+
+	img.titulo1, img.logo2{
+	    width: 60px;
+	}
+	header{
+	    height: auto;
+	    position:relative;
+	}
+	button.navbar-toggler{
+	    border: none;
+	}
+	h2.tituloprincipal{
+	    font-family:The_Future;
+	    font-size: 25px;
+	       margin-bottom: 20px;
+	       color:#CD8175;
+	       text-shadow: 0px 5px #836DB2;
+	      -webkit-text-fill-color:#CD8175;
+	}
+	span.desplegable{
+	    color: #CD8175;
+	    font-size: 30px;		
+	}
+	span.desplegable:hover{
+	    color: #836DB2;
+	}
+	#menudesplegable{
+	    font-size: 13px;
+	    font-family:The_Future;
+	    color: #CD8175;
+	}
+	#menudesplegable:hover{
+	    color: #836DB2;
+	    background-color: #CD8175;
+	    transition: background-color 0.3s ease;
+	    border-radius: 40px;
+	}
+	.fondosection{
+	    height: auto;
+	    background-image:url(proyectos/imagenes/fondo1.png);
+	    background-size: cover;
+	    background-position: center;
+	    background-attachment: fixed;
+	    
+	}
+	/*galeria de imagenes*/
+	.galeria {
+            display: inline-block;
+            font-size: 0;
+            width: 100%;
+            height: auto;
+            padding: 10px;
+            background-clip: padding-box;
+        }
+        .galeria > span {
+            display: block;
+            cursor: pointer;
+            width: 100%;
+            height: 0;
+            padding-bottom: 70%;
+            background-size: cover;
+            background-position: center center;
+        }
+        .galeria img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+	/*portfolio*/
+	.fondofooterfinal{
+	    height: auto;
+	    background-image: url(proyectos/imagenes/Fondo2.png);
+	    background-size: cover;
+	    background-position: center;
+	    background-attachment: fixed;
+	    filter: grayscale(10%);
+	}
+	.fondofooter{
+	    height: auto;
+	}
+	.fotoperfil{
+	    width: 30%;
+	    height: auto;
+	    align-items: center;
+	    justify-content: center;
+	    display: flex;
+	    border-radius: 30px;
+
+	}
+	i.youtube, i.linkedin, i.email{
+	    color: #CD8175;
+	    font-size: 20px;
+	}
+	i.youtube:hover, i.linkedin:hover, i.email:hover{
+	    color: #836DB2;
+	}
+	h4.tituloprincipal2{
+	    font-family:The_Future;
+	    font-size: 22px;
+	    margin-bottom: 20px;
+	    color:white;
+
+	}
+	h4.tituloprincipal3{
+		font-family:The_Future;
+	    font-size: 22px;
+	    margin-bottom: 20px;
+	    color:#836DB2;
+	}
+	/*liquido*/
+
+	#progress-wrapper {
+      width: 100%;
+      position: relative;             
+      z-index: 2;
+      box-sizing: border-box;
+      box-shadow: 0px -2px 5px rgba(0, 0, 0, 1);
+      opacity: 1; 
+    } 
+
+    #progress .row { 
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .progress-circle{ 
+      width: 150px;
+      height: 150px;
+      box-sizing: border-box;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      margin: 5px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+   .progress-circle {
+      position: relative;
+      border-radius: 20%;
+      overflow: hidden;
+      border: 5px solid #6b5992;
+      box-shadow: 0 0 20px rgba(170, 163, 209, 0.8);
+    }
+
+    .inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .water {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: #836DB2;
+      border-radius: 40%;
+      top: 100%;
+      left: -50%;
+      animation: wave 5s infinite linear, rise 2s forwards ease-in-out;
+      box-shadow: 0 0 15px rgba(170, 163, 209, 0.8);
+    }
+
+    .text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      color: #afafaf;
+      font-weight: bold;
+      z-index: 1;
+      text-align: center;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #progress h2, #progress p {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    #progress h2{
+      font-family:The_Future;
+      font-weight: bold;
+      font-size: 95px;
+      color: #FCEAE3;
+    }
+
+     #progress .progress-circle {
+      transition: transform 0.3s ease,0.3s ease;
+    }
+
+     #progress .progress-circle:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+	.iconosaplicaciones{
+	  border-radius: 10px;
+	  padding: 15px;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  margin-bottom: 15px;
+	  font-family:The_Future;
+	  z-index: 100;
+	}
+	.estudiante{
+	  color:#836DB2 ;
+	}
+	.iconosaplicaciones img {
+	  max-width: 50px;
+	  margin-bottom: 10px;
+	}
+	.sobre-mi {
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  flex-direction: column;
+	}
+	.parrafosobremi{
+	  color: white;
+	  font-family:The_Future;
+	  font-size: 13px;
+	}
+	#contacto {
+	  color: #CD8175;
+	  border-radius: 10px;
+	  font-family:The_Future;    
+	}
+	.form-control {
+	    border-radius: 8px;
+	    border: 1px solid #ccc;
+	}
+	button.botonenviar {
+	    background-color:#a95e52 ;
+	    border: none;
+	    padding: 10px 20px;
+	    font-size: 16px;
+	    border-radius: 5px;
+	    transition: background-color 0.3s ease;
+	}
+	button.botonenviar:hover {
+	        background-color: #836DB2;
+	}
+	.copy{
+	    font-size: 12px;
+	    background-color: #00010c;
+	    width: 100%;
+	}
+	@media screen and (min-width:576px){
+	    img.titulo1, img.logo2{
+	        width: 70px;
+	    }
+	    i.desplegable{
+	        font-size: 40px;
+	    }
+	#menudesplegable{
+	        font-size: 13px;
+	    }
+	    .tresD{
+	        height: 50vh;
+	        width: 100%;
+	    }
+	    h2.tituloprincipal{
+	        font-size: 26px;
+	    }
+	    h4.tituloprincipal2{
+	        font-size: 24px;
+	    }
+	      .parrafosobremi{
+	        font-size: 15px;
+	      }
+	    i.youtube, i.linkedin, i.email{
+	        font-size: 25px;
+	    }
+	    .copy{
+	        font-size: 14px;
+	    }
+	}
+	@media screen and (min-width:768px){
+	    img.titulo1, img.logo2{
+	        width: 80px;
+	    }
+	    #menudesplegable{
+	        font-size: 18px;
+	    }
+	    .tresD{
+	        height: 70vh;
+	        width: 100%;
+	    }
+	    h2.tituloprincipal{
+	        font-size: 30px;
+	    }
+	    h4.tituloprincipal2{
+	        font-size: 28px;
+	    }
+	      .parrafosobremi{
+	        font-size: 17px;
+	      }
+	    i.youtube, i.linkedin, i.email{
+	        font-size: 30px;
+	    }
+	    .copy{
+	        font-size: 16px;
+	    }
+	}
+	@media screen and (min-width:960px){
+	    img.titulo1, img.logo2{
+	        width: 100px;	
+	    }
+	    #menudesplegable{
+	        font-size: 24px;
+	    }
+	    .tresD{
+	        height: 90vh;
+	        width: 100%;
+	    }
+	    h2.tituloprincipal{
+	        font-size: 35px;
+	    }
+	    h4.tituloprincipal2{
+	        font-size: 30px;
+	    }
+	      .parrafosobremi{
+	        font-size: 19px;
+	      }
+	    i.youtube, i.linkedin, i.email{
+	        font-size: 35px;
+	    }
+	    .copy{
+	        font-size: 18px;
+	    }
+	    
+	}
+
+	.centrado{
+	    justify-content: space-between;
+	}
+
+	</style>
+	<script src="LC-Lightbox-LITE-master/lib/jquery.js" type="text/javascript"></script>
+	<script src="LC-Lightbox-LITE-master/js/lc_lightbox.lite.js" type="text/javascript"></script>
+	<script src="LC-Lightbox-LITE-master/lib/AlloyFinger/alloy_finger.min.js" type="text/javascript"></script> 
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+                document.body.style.overflowY = 'auto';
+            }, 1000);
+        };
+    </script>
+   
+</head>
+<body>
+	<div id="loading">
+		<div class="container">
+        <div class="cubo">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="loading m-3">
+            <h1>LOADING</h1>
+            <p>...</p>
+        </div>
+    </div>
+	</div>
+	<!-- portfolio -->
+<div id="main-content">	
+
+<div class="cursor"></div>
+<div class="gridContainer clearfix">
+	<header>
+		<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-negro">
+  			<a class="navbar-brand" href="#"><img src="proyectos/imagenes/Logo Azahara.png" class="titulo1 float-left "></a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  			</button>
+  			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+    			<ul class="navbar-nav ml-auto align-items-center">
+      				<li class="nav-item active">
+        				<a class="nav-link text-center font-weight-bold" id="menudesplegable" href="#" onclick="setActive(this)">HOME <span class="sr-only">(current)</span></a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link text-center font-weight-bold" id="menudesplegable" href="#proyectos" onclick="setActive(this)">PROYECTOS</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link text-center font-weight-bold" id="menudesplegable" href="#habilidadessobremi" onclick="setActive(this)">HABILIDADES</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link text-center font-weight-bold" id="menudesplegable" href="#contacto" onclick="setActive(this)">CONTACTO</a>
+      				</li>
+    			</ul>
+  			</div>
+		</nav>
+			<div class="sketchfab-embed-wrapper col-12 p-0">
+				<iframe class="tresD" title="Logo Azahara" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/f1dee0aa5bf343298a20b696d56ca12c/embed?autospin=1&autostart=1&preload=1&transparent=1"> 
+				</iframe> 
+			</div>
+	</header>
+	<section>
+	  <div class="container-fluid">
+	    <div class="row">
+	      <div class="col-12 fondosection">
+	        <h2 id="proyectos" class="tituloprincipal font-weight-bold text-center mt-5">PROYECTOS PRINCIPALES</h2>
+	        <div class="container mt-5">
+	          <div class="row justify-content-center">
+	          	<!-- Edición de fotos -->
+				<h4 class="col-12 tituloprincipal2 font-weight-bold text-center mt-5">EDICIÓN DE IMAGENES</h4>
+		        <!-- Imagen 1 -->
+		        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+		            <a class="galeria" href="proyectos/imagenes/coche1editada.png" title="Opel Astra" data-lcl-txt="Lorem ipsum dolor sit amet" data-lcl-author="Azahara" data-lcl-thumb="proyectos/imagenes/coche1editada.png">
+		                <span style="background-image: url(proyectos/imagenes/coche1editada.png);"></span>
+		            </a>
+		        </div>
+		        <!-- Imagen 2 -->
+		        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+		            <a class="galeria" href="proyectos/imagenes/coche2editado.png" title="Citroen C4" data-lcl-txt="Lorem ipsum dolor sit amet" data-lcl-author="Azahara" data-lcl-thumb="proyectos/imagenes/coche2editado.png">
+		                <span style="background-image: url(proyectos/imagenes/coche2editado.png);"></span>
+		            </a>
+		        </div>
+		        <!-- Imagen 3 -->
+		        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+		            <a class="galeria" href="proyectos/imagenes/coche3editado.png" title="Volkswagen Scirocco" data-lcl-txt="Lorem ipsum dolor sit amet" data-lcl-author="Azahara" data-lcl-thumb="proyectos/imagenes/coche3editado.png">
+		                <span style="background-image: url(proyectos/imagenes/coche3editado.png);"></span>
+		            </a>
+		        </div>
+	            <!-- Objetos 3D -->
+	            <h4 class="col-12 tituloprincipal2 font-weight-bold text-center mt-5">OBJETOS 3D</h4>
+	            
+	            <!-- Primer objeto 3D -->
+	            <div class="sketchfab-embed-wrapper col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplostresd" title="piano" frameborder="0" allowfullscreen src="https://sketchfab.com/models/5f56933700d94c53835ede496b813f82/embed?autostart=1&transparent=1"></iframe>
+	            </div>
+	            <!-- Segundo objeto 3D -->
+	            <div class="sketchfab-embed-wrapper col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplostresd" title="astronauta" frameborder="0" allowfullscreen src="https://sketchfab.com/models/13a3b9fccaa248e1891761448b33ce24/embed?autospin=1&autostart=1&preload=1&transparent=1"></iframe>
+	            </div>
+	            <!-- Tercer objeto 3D -->
+	            <div class="sketchfab-embed-wrapper col-lg-4 col-md-6 col-12"> 
+	            	<iframe class="ejemplostresd" title="Dobby" frameborder="0" allowfullscreen src="https://sketchfab.com/models/98069991ffae440c9fa6f28ee222d7cc/embed?autospin=1&autostart=1&transparent=1"> </iframe>
+	            </div>
+	            
+	            <!-- Proyectos 3D -->
+	            <h4 class="col-12 tituloprincipal2 font-weight-bold text-center mt-5">PROYECTOS 3D</h4>
+	            <!-- Proyecto 3D 1 -->
+
+	            <div class="video-container col-12 col-md-6 col-lg-4">
+	              	<iframe src="https://www.youtube.com/embed/O0pv36wjIww"
+				  		title="Flexo" 
+				  		frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+					</iframe>
+	            </div>
+
+	            <!-- Proyecto 3D 2 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe src="https://www.youtube.com/embed/Qk-rVXCQjGY" title="INTRO DJ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	            </div>
+	            <!-- Proyecto 3D 3 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe src="https://www.youtube.com/embed/g5zeotnUIeI" title="Partículas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	            </div>
+	            <!-- Proyecto 3D 4 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe src="https://www.youtube.com/embed/1MpltoptuR8" title="Motion Graphics" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	            </div>
+
+	            <!-- Montaje -->
+	            <h4 class="col-12 tituloprincipal2 font-weight-bold text-center mt-5">MONTAJE</h4>
+	            <!-- Montaje 1 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe src="https://www.youtube.com/embed/ctV1hTn3gyA" title="Montaje Musical" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	            </div>
+	            <!-- Montaje 1 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	            	<iframe class="ejemplos" src="https://www.youtube.com/embed/b7Zv4SBkuGE" title="Montaje de audio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	            </div>
+	            <!-- Montaje 3 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12">
+	              <iframe class="ejemplos" src="https://www.youtube.com/embed/te3-trbvEkE" title="Montaje Creativo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	            </div>
+	            <!-- Montaje 4 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12 mb-lg-5">
+	              <iframe class="ejemplos" src="https://www.youtube.com/embed/_cy5kDngztU" title="Teaser de Harry Potter y el misterio del principe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	            </div>
+	            <!-- Montaje 5 -->
+	            <div class="video-container col-lg-4 col-md-6 col-12 mb-5 mb-md-5 mb-lg-5">
+	              <iframe class="ejemplos" src="https://www.youtube.com/embed/Mtfimm5tMcY" title="Defectos y Taras (letra) SFDK" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	            </div> 
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+	<main>
+    <div class="container">
+      <!-- Progress Section -->
+<h2 id="habilidadessobremi" class="tituloprincipal font-weight-bold text-center mt-5">HABILIDADES</h2>
+<div class="row">
+  <div class="col-12 col-md-6">
+    <div class="row">
+      <div id="progress-wrapper">
+        <section id="progress" class="container">
+          <div class="row ml-1 mb-5">
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/PHOTOSHOP.png" alt="Photoshop">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">PHOTOSHOP</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/AFTER EFFECTS.png" alt="After Effects">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">AFTER EFFECTS</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/DREAMWEAVER.png" alt="Dreamweaver">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">DREAMWEAVER</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/PREMIERE.png" alt="Premiere">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">PREMIERE PRO</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/AUDITION.png" alt="Audition">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">AUDITION</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/XD.png" alt="XD">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">XD</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/JAVA SCRIPT.png" alt="Javascript">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">JAVASCRIPT</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/CSS.png" alt="Css">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">CSS</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/HTML5.png" alt="HTML">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">HTML5</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/BOOTSTRAP.png" alt="Bootstrap">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">BOOTSTRAP</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/BLENDER.png" alt="Blender">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">BLENDER</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex d-lg-block justify-content-center align-items-center mb-1 mb-md-3">
+              <div class="progress-circle">
+                <div class="iconosaplicaciones">
+                  <img src="proyectos/imagenes/aplicaciones/UNITY.png" alt="Unity">
+                </div>
+                <div class="inner">
+                  <div class="water"></div>
+                  <div class="text mt-5">UNITY</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="sobre-mi">
+          <h4 class="tituloprincipal3 font-weight-bold">SOBRE MÍ</h4>
+          <img class="fotoperfil" src="proyectos/imagenes/foto azahara.png" alt="fotoperfil">
+          <p class="parrafosobremi">
+            ¡Hola! Soy Azahara Lucas Garrón, tengo 19 años y soy <span class="estudiante"> técnica en animación 2D, 3D y entornos de videojuegos.</span>.
+          </p>
+          <p class="parrafosobremi">
+          	Mi interés por el arte y la animación comenzó gracias a mi fascinación por los videojuegos y las películas de animación 3D. Desde pequeña, quedé cautivada por la forma en que estos medios combinaban creatividad y tecnología para dar vida a mundos increíbles y personajes inolvidables. Esto despertó en mí el deseo de formar parte de ese proceso de creación.
+          </p>
+          <p class="parrafosobremi">
+            Soy una persona comprometida,responsable, creativa y con gran atención al detalle. Disfruto cada etapa del proceso creativo, desde el concepto inicial hasta el producto final, asegurándome de que cada proyecto transmita emoción y calidad.
+          </p>
+          <p class="parrafosobremi">
+          	Disfruto combinando la creatividad con la técnica, siempre buscando nuevas maneras de superar mis límites y crear experiencias visuales únicas. Mi objetivo es continuar aprendiendo y contribuyendo a proyectos que no solo cautiven, sino que también inspiren, aportando calidad e innovación a cada trabajo que realizo.
+          </p>
+        </div>
+      </div>
+  </div>
+
+	</main>
+	<footer>
+		<div class="container-fluid">
+			<div class="row fondofooterfinal">
+				<div id="contacto" class="col-12 container mt-5 mb-5 fondofooter">
+					<h2 class="tituloprincipal font-weight-bold text-center mt-5 mb-4">CONTÁCTAME</h2>
+					<form class="col-6" action="https://formspree.io/f/mgverydj" method="POST">
+						<div class="form-group">
+							<label for="nombre">Nombre:</label>
+							<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Correo Electrónico:</label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Tu correo" required>
+						</div>
+						<div class="form-group">
+							<label for="mensaje">Mensaje:</label>
+							<textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+						</div>
+						<button type="submit" class="btn botonenviar btn-block">Enviar</button>
+					</form>
+				</div>
+				<div class="col-12">
+					<div class="row d-flex justify-content-center align-items-center m-1 mb-5">
+						<a href="https://www.youtube.com/@azahara05">
+              				<i class="bi bi-youtube youtube m-2"></i>
+            			</a>
+						<a href="mailto:alucgar105@g.educaand.es">
+							<i class="bi bi-envelope-heart-fill email m-2"></i>
+						</a>
+						<a href="https://linkedin.com/in/azahara-lucas-garron-75b69433a">
+							<i class="bi bi-linkedin linkedin m-2"></i></a>
+					</div>
+					<div class="col-12 d-flex justify-content-center align-items-center mt-5 mb-5">
+						<a href="https://skfb.ly/pstpq">
+							<img src="proyectos/imagenes/Logo Azahara.png" class="logo2">
+						</a>
+					</div>
+				</div>
+				<div class="col-12 container copy text-center py-4">
+					<p>&copy; 2024 - Azahara Lucas Garrón - Mi Portfolio</p>
+				</div>
+			</div>
+		</footer>
+</div>
+</div>
+	<script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.navbar .nav-link');
+
+        // Detect active section on scroll
+        window.addEventListener('scroll', () => {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 50) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            // Update active link
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Ensure active link on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentHash = location.hash || '#home';
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentHash) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+       <script type="text/javascript">
+			const cursor = document.querySelector(".cursor");
+			let timeout;
+
+			
+			document.addEventListener("mousemove", (e) => {
+				clearTimeout(timeout);
+				const x = e.clientX; 
+				const y = e.clientY; 
+
+				cursor.style.transform = `translate(${x}px, ${y}px)`;
+				cursor.style.display = "block";
+
+				timeout = setTimeout(() => {
+					cursor.style.display = "none";
+				}, 1000);
+			});
+
+		
+			document.addEventListener("mouseout", (e) => {
+				if (!e.relatedTarget || e.relatedTarget.nodeName === "HTML") {
+					cursor.style.display = "none";
+				}
+			});
+
+			const iframe = document.querySelector("iframe");
+			if (iframe) {
+				iframe.addEventListener("mouseenter", () => {
+					cursor.style.display = "none";
+				});
+				iframe.addEventListener("mouseleave", () => {
+					cursor.style.display = "block";
+				});
+			}
+
+		</script>
+    <script>
+    function createStars() {
+      const numberOfStars = 100;
+      const starContainer = document.getElementsByTagName("header")[0];
+
+      for (let i = 0; i < numberOfStars; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+
+
+        const size = Math.random() * 3 + 1 + 'px';
+        star.style.width = size;
+        star.style.height = size;
+
+        const xPos = Math.random() * window.innerWidth + 'px';
+        const yPos = Math.random() * window.innerHeight + 'px';
+        star.style.left = xPos;
+        star.style.top = yPos;
+
+        const moveX = (Math.random() * 200 - 100) + 'px';
+        const moveY = (Math.random() * 200 - 100) + 'px';
+        star.style.setProperty('--move-x', moveX);
+        star.style.setProperty('--move-y', moveY);
+
+        star.style.animation =`moveStar ${Math.random() * 10 + 5}s infinite ease-in-out, twinkle 3s infinite ease-in-out`;
+
+        starContainer.appendChild(star);
+      }
+    }
+    function regenerateStars() {
+      document.querySelectorAll('.star').forEach(star => star.remove());
+      createStars();
+    }
+    createStars();
+    window.addEventListener('resize', regenerateStars);
+  </script>
+  <script>
+    $(document).ready(function(e) {
+        lc_lightbox('.galeria', {
+            wrap_class: 'lcl_fade_oc',
+            gallery: true,    
+            thumb_attr: 'data-lcl-thumb', 
+            skin: 'minimal',
+            radius: 0,
+            padding: 0,
+            border_w: 0,
+        });  
+    });
+</script>
+<script>
+  $(window).on('scroll', function () {
+    const scrollPosition = $(window).scrollTop();
+    const windowHeight = $(window).height();
+
+    $('.progress-circle').each(function() {
+      const circlePosition = $(this)[0].getBoundingClientRect().top + scrollPosition;
+
+      if (circlePosition < scrollPosition + windowHeight && circlePosition + $(this).height() > scrollPosition) {
+        $(this).css({
+          'opacity': '1',
+          'transform': 'translateY(0)' 
+        });
+      } else {
+        
+        $(this).css({
+          'opacity': '0',           
+          'transform': 'translateY(50px)'
+        });
+      }
+    });
+  });
+
+</script>
+<script>
+    $(document).ready(function () {
+      // Niveles de progreso para cada burbuja
+      const progressValues = [90, 60, 50, 90, 80, 95, 30, 45, 65, 55, 80, 45];
+
+      $(".progress-circle").each(function(index) {
+        const progressValue = progressValues[index];
+        const bubbleText = $(this).find(".text").text();
+        const adjustedValue = 100 - progressValue;
+
+        $(this).find(".water").css("top", `${adjustedValue}%`);
+
+        $(this).find(".text").text(bubbleText);
+      });
+    }); 
+  </script>
+ 
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
