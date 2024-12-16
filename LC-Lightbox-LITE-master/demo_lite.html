@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería Responsiva con Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/lc_lightbox.css" />
+    <link rel="stylesheet" href="skins/minimal.css" />
+    
+    <style type="text/css">
+        .galeria {
+            display: inline-block;
+            font-size: 0;
+            width: 100%;
+            height: auto;
+            background: #fff;
+            padding: 10px;
+            background-clip: padding-box;
+        }
+        .galeria > span {
+            display: block;
+            cursor: pointer;
+            width: 100%;
+            height: 0;
+            padding-bottom: 70%;
+            background-size: cover;
+            background-position: center center;
+        }
+        .galeria img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Imagen 1 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <a class="galeria" href="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?dpr=1&auto=format&fit=crop&w=2000&q=80&cs=tinysrgb" title="Coche 1" data-lcl-txt="Lorem ipsum dolor sit amet" data-lcl-author="Someone" data-lcl-thumb="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?dpr=1&auto=format&fit=crop&w=150&q=80&cs=tinysrgb">
+                <span style="background-image: url(https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?dpr=1&auto=format&fit=crop&w=400&q=80&cs=tinysrgb);"></span>
+            </a>
+        </div>
+        <!-- Imagen 2 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <a class="galeria" href="https://images.unsplash.com/photo-1502082553048-f009c37129b9?dpr=1&auto=format&fit=crop&w=2000&q=80&cs=tinysrgb" title="Coche 2" data-lcl-txt="Lorem ipsum dolor sit amet" data-lcl-author="Someone" data-lcl-thumb="https://images.unsplash.com/photo-1502082553048-f009c37129b9?dpr=1&auto=format&fit=crop&w=150&q=80&cs=tinysrgb">
+                <span style="background-image: url(https://images.unsplash.com/photo-1502082553048-f009c37129b9?dpr=1&auto=format&fit=crop&w=400&q=80&cs=tinysrgb);"></span>
+            </a>
+        </div>
+        <!-- Imagen 3 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <a class="galeria" href="https://images.unsplash.com/photo-1442850473887-0fb77cd0b337?dpr=1&auto=format&fit=crop&w=2000&q=80&cs=tinysrgb" title="Image 3" data-lcl-txt="Lorem ipsum dolor sit amet" data-lcl-author="Someone" data-lcl-thumb="https://images.unsplash.com/photo-1442850473887-0fb77cd0b337?dpr=1&auto=format&fit=crop&w=150&q=80&cs=tinysrgb">
+                <span style="background-image: url(https://images.unsplash.com/photo-1442850473887-0fb77cd0b337?dpr=1&auto=format&fit=crop&w=400&q=80&cs=tinysrgb);"></span>
+            </a>
+        </div>
+        <!-- Imagen 4 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <a class="galeria" href="https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?dpr=1&auto=format&fit=crop&w=2000&q=80&cs=tinysrgb" title="Image 4" data-lcl-txt="Lorem ipsum dolor sit amet" data-lcl-author="Someone" data-lcl-thumb="https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?dpr=1&auto=format&fit=crop&w=150&q=80&cs=tinysrgb">
+                <span style="background-image: url(https://images.unsplash.com/photo-1431794062232-2a99a5431c6c?dpr=1&auto=format&fit=crop&w=400&q=80&cs=tinysrgb);"></span>
+            </a>
+        </div>
+        <!-- Imagen 5 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <a class="galeria" href="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?dpr=1&auto=format&fit=crop&w=2000&q=80&cs=tinysrgb" title="Image 5" data-lcl-txt="Lorem ipsum dolor sit amet" data-lcl-author="Someone" data-lcl-thumb="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?dpr=1&auto=format&fit=crop&w=150&q=80&cs=tinysrgb">
+                <span style="background-image: url(https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?dpr=1&auto=format&fit=crop&w=400&q=80&cs=tinysrgb);"></span>
+            </a>
+        </div>
+        <!-- Imagen 6 -->
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <a class="galeria" href="https://images.unsplash.com/photo-1482192505345-5655af888cc4?dpr=1&auto=format&fit=crop&w=2000&q=80&cs=tinysrgb" title="Image 6" data-lcl-txt="Lorem ipsum dolor sit amet" data-lcl-author="Someone" data-lcl-thumb="https://images.unsplash.com/photo-1482192505345-5655af888cc4?dpr=1&auto=format&fit=crop&w=150&q=80&cs=tinysrgb">
+                <span style="background-image: url(https://images.unsplash.com/photo-1482192505345-5655af888cc4?dpr=1&auto=format&fit=crop&w=400&q=80&cs=tinysrgb);"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<!-- LC Lightbox JS -->
+<script src="lib/jquery.js" type="text/javascript"></script>
+<script src="js/lc_lightbox.lite.js" type="text/javascript"></script>
+
+<script>
+    $(document).ready(function(e) {
+        lc_lightbox('.galeria', {
+            wrap_class: 'lcl_fade_oc',
+            gallery: true,    
+            thumb_attr: 'data-lcl-thumb', 
+            skin: 'minimal',
+            radius: 0,
+            padding: 0,
+            border_w: 0,
+        });  
+    });
+</script>
+
+</body>
+</html>
